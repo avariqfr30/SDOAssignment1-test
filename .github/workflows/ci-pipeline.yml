@@ -53,5 +53,5 @@ jobs:
    - if: success() || failure()
      uses: actions/upload-artifact@v3
      with:
-       name: unit-test-${{ github.sha }}
+       name: artifact1
        path: reports/report.xml
