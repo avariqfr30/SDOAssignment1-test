@@ -53,5 +53,5 @@ jobs:
    - if: success() || failure()
      uses: actions/upload-artifact@v3
      with:
-       name: artifact1
-       path: reports/report.xml
+       name: report-2.xml
+       path: reports
