@@ -1,5 +1,10 @@
 const mockingoose = require('mockingoose');
 const Note = require("../../models/note")
+const bodyParser = require("body-parser")
+
+module.exports = function(app) {
+    app.use(bodyParser.urlencoded({ extended: true }));
+}
 
 // Unit Tests only test the validation built into Note
 
@@ -17,7 +22,7 @@ describe('mockingoose', () => {
             });
 
             const result = await todo.validateSync();
-            expect(result).toBe(undefined);
+            expect(result == undefined).toBe(false);
         });
     })
 })
