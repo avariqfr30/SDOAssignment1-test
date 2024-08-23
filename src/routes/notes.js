@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const Note = require('../models/note');
+const Login = require('../models/login.html')
 
 router.get('/new', (req, res) => {
   res.render('new');
