@@ -21,8 +21,6 @@ jobs:
         mongodb-version: "7.0.12"
     - name: Install dependencies
       run: npm install --prefix src
-    - name : Start application
-      run: npm run start --prefix src
     - name: Run linter
       run: npm run test-lint --prefix src
   unit-tests:
