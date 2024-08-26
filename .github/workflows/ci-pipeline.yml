@@ -54,4 +54,4 @@ jobs:
      uses: actions/upload-artifact@v3
      with:
        name: code-coverage-report
-       path: /src/coverage/lcov-report/note.js.html
+       path: src/coverage/lcov-report/
