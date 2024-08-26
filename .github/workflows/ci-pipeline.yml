@@ -1,4 +1,4 @@
-name: Notes Application CI Pipeline
+name: Notes Application CI Pipeline (For unit testing)
 on:
   push:
     branches:
