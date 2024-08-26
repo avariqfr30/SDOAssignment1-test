@@ -1,4 +1,4 @@
-name: Notes Application CI Pipeline (For unit testing)
+name: Notes Application CI Pipeline
 on:
   push:
     branches:
@@ -6,6 +6,7 @@ on:
   pull_request:
     branches:
     - main
+    - features/lint-testing
 jobs:
   lint:
     runs-on: ubuntu-latest
