@@ -82,7 +82,7 @@ Integration testing is included to ensure the application can talk to the MongoD
 Run integration testing with the following command:
 
 ```
-npm run test-integration --prefix src
+
 ```
 
 ### E2E Testing
