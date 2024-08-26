@@ -53,5 +53,5 @@ jobs:
    - if: success() || failure()
      uses: actions/upload-artifact@v3
      with:
-       name: report-2.xml
-       path: reports
+       name: code-coverage-report
+       path: /src/coverage/lcov-report/note.js.html
