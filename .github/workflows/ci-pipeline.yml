@@ -3,6 +3,7 @@ on:
   push:
     branches:
     - main
+    - devbranch
     - features/lint-testing
     - features/unit-testing
     - features/integration-testing
@@ -10,6 +11,7 @@ on:
   pull_request:
     branches:
     - main
+    - devbranch
     - features/lint-testing
     - features/unit-testing
     - features/integration-testing
@@ -78,7 +80,7 @@ jobs:
     - name: Install Playwright
       run: npx playwright install --with-deps
     - name: Run Playwright tests
-      run: shx 'cd src & npx playwright test'
+      run: npx playwright test'
     - uses: actions/upload-artifact@v3
       if: always()
       with:

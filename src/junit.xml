@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jest tests" tests="1" failures="1" errors="0" time="1.802">
-  <testsuite name="Add Note" errors="0" failures="1" skipped="0" timestamp="2024-08-26T07:38:03" time="1.528" tests="1">
-    <testcase classname="Add Note Should add a new note and redirect to login" name="Add Note Should add a new note and redirect to login" time="0.107">
+<testsuites name="jest tests" tests="1" failures="1" errors="0" time="0.659">
+  <testsuite name="Add Note" errors="0" failures="1" skipped="0" timestamp="2024-08-28T13:28:46" time="0.559" tests="1">
+    <testcase classname="Add Note Should add a new note and redirect to login" name="Add Note Should add a new note and redirect to login" time="0.039">
       <failure>Error: listen EADDRINUSE: address already in use :::3000
-    at Server.setupListenHandle [as _listen2] (net.js:1310:16)
-    at listenInCluster (net.js:1358:12)
-    at Server.listen (net.js:1444:7)
+    at Server.setupListenHandle [as _listen2] (node:net:1331:16)
+    at listenInCluster (node:net:1379:12)
+    at Server.listen (node:net:1467:7)
     at Function.listen (/home/avariqfr30/SDOAssignment1-test/src/node_modules/express/lib/application.js:618:24)
     at Object.&lt;anonymous&gt; (/home/avariqfr30/SDOAssignment1-test/src/app.js:25:5)
     at Runtime._execModule (/home/avariqfr30/SDOAssignment1-test/src/node_modules/jest-runtime/build/index.js:1646:24)

@@ -4,9 +4,10 @@ test('test', async ({ page }) => {
 
   // Go to http://localhost:3000/
   await page.goto('http://localhost:3000/');
+  await expect(page).toHaveTitle('Notes Tonight');
 
   // Click text=New Note
-  await page.locator('text=New Note').count();
+  await page.locator('text=New Note').first().click();
   await expect(page).toHaveURL('http://localhost:3000/new');
 
   // Click [placeholder="Enter Note Title"]
@@ -26,7 +27,7 @@ test('test', async ({ page }) => {
   await expect(page).toHaveURL('http://localhost:3000/');
 
   // Click text=Delete
-  await page.locator('text=Delete').click();
+  await page.locator('text=Delete').first().click();
   await expect(page).toHaveURL('http://localhost:3000/');
 
 });
