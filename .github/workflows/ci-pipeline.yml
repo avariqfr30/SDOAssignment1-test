@@ -67,6 +67,8 @@ jobs:
         node-version: "17.6.0"
     - name: Install dependencies
       run: npm install --prefix src
+    - name: initialize Playwright
+      run: npm init playwright@latest
     - name: Run Playwright tests
       run: npx playwright test
     - uses: actions/upload-artifact@v3
