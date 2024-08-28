@@ -3,24 +3,8 @@
 - Full Name/Names: Avariq Fazlur Rahman / Bernard Choa
 - Student ID/IDs: s4115250 / s4115597
 
-### Guidance (remove this section before final submission)
-
-1. Refer for assignment specification `Marking Guide` for details of what should appear in this README.
-
-2. If you do not see an `Actions` tab in your GitHub, email matthew.cullen@rmit.edu.au with URL to your repository, so that it can be enabled.
-
-3. Implement your CI pipeline in the directory `.github/workflows`.
-
-4. Refer to [src/README.md](/src/README.md) for important details on building and testing the application.
-
-5. Commit images to the `img` directory and add them like 
-    ```html
-    <img src="/img/md.png" style="height: 70px;"/>
-    ```
-    <img src="/img/md.png" style="height: 70px;"/>
-
-6. Only edit THIS README.md - not the src/README.md
 ## 1. Introduction of Pipeline
+A CI pipeline is made as a means of automating tests that are usually ran for ensuring the quality and robustness of an application. With a CI Pipeline, a runner can just follow the steps that are given within the pipeline as the code is directed into the repository, making it easy and efficient for testing.
 ### 1.1 Initialization of Project using CI Pipeline
 The CI Pipeline for this project begins with the name of the project, which in this case will be "Notes Application CI Pipeline". Below that, we will denote where the packages are pushed and where pull requests will be made to.
 
@@ -40,7 +24,6 @@ This command will ensure us about any errors or maybe warnings we'd want to watc
 <img src="img/linting.png" style="height: 180px;"/>
 
 This line will show us if there are any errors or any warnings, such as the picture warning us that there are unused variables in this code.
-
 
 ## 2. Automated Testing
 ### 2.1 Unit Testing
