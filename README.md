@@ -1,7 +1,7 @@
 # COSC2759 Assignment 1
 ## Notes App - CI Pipeline
-- Full Name/Names: **FILL IN**
-- Student ID/IDs: **FILL IN**
+- Full Name/Names: Avariq Fazlur Rahman / Bernard Choa
+- Student ID/IDs: s4115250 / s4115597
 
 ### Guidance (remove this section before final submission)
 
@@ -20,10 +20,14 @@
     <img src="/img/md.png" style="height: 70px;"/>
 
 6. Only edit THIS README.md - not the src/README.md
-## 1. Heading
-### 1.1 Subheading 
-### 1.2 Subheading 
+## 1. Introduction of Pipeline
+### 1.1 Initialization of Project using CI Pipeline
+The CI Pipeline for this project begins with the name of the project, which in this case will be "Notes Application CI Pipeline". Below that, we will denote where the packages are pushed and where pull requests will be made to.
+<img src="img/branching.png" style="height: 50px;"/>
+In this instance, 
+### 1.2 Linting
 
-## 2. Heading
-### 2.1 Subheading 
-### 2.2 Subheading 
+## 2. Automated Testing
+### 2.1 Unit Testing
+### 2.2 Implementation Testing
+### 2.3 End-to-End Testing
