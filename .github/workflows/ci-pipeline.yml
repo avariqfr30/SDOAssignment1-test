@@ -25,10 +25,6 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: "17.6.0"
-    - name: Start MongoDB
-      uses: supercharge/mongodb-github-action@1.11.0
-      with:
-        mongodb-version: "7.0.12"
     - name: Install dependencies
       run: npm install --prefix src
     - name: run lint
@@ -44,6 +40,10 @@ jobs:
        node-version: "17.6.0"
    - name: Install dependencies
      run: npm install --prefix src
+   - name: Start MongoDB
+     uses: supercharge/mongodb-github-action@1.11.0
+     with:
+       mongodb-version: "7.0.12"
    - name: Run unit tests
      run: npm run test-unit --prefix src
    - if: success() || failure()
@@ -77,6 +77,10 @@ jobs:
         node-version: "17.6.0"
     - name: Install dependencies
       run: npm install --prefix src 
+    - name: Start MongoDB
+      uses: supercharge/mongodb-github-action@1.11.0
+      with:
+        mongodb-version: "7.0.12"
     - name: Install Playwright
       run: npx playwright install --with-deps
     - name: Run Playwright tests
