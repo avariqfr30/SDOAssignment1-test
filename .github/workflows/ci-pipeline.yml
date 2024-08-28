@@ -3,9 +3,17 @@ on:
   push:
     branches:
     - main
+    - features/lint-testing
+    - features/unit-testing
+    - features/integration-testing
+    - features/adde2e-testing
   pull_request:
     branches:
     - main
+    - features/lint-testing
+    - features/unit-testing
+    - features/integration-testing
+    - features/adde2e-testing
 jobs:
   lint:
     runs-on: ubuntu-latest
