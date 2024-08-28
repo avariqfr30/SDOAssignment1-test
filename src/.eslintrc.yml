@@ -12,3 +12,4 @@ parserOptions:
   ecmaVersion: 2018
 rules:
   no-trailing-spaces: "error"
+  no-unused-vars: ["warn", { "varsIgnorePattern": "VARIABLE_NAME"}]
