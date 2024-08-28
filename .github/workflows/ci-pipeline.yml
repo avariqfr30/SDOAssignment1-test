@@ -81,8 +81,10 @@ jobs:
       uses: supercharge/mongodb-github-action@1.11.0
       with:
         mongodb-version: "7.0.12"
+    - name: Install Playwright
+      run: cd src && npx playwright install --with-deps
     - name: Run Playwright tests
-      run: cd src && npx playwright test
+      run: cd src && src playwright test
     - uses: actions/upload-artifact@v3
       if: always()
       with:
