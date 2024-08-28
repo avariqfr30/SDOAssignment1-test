@@ -23,6 +23,8 @@
 ## 1. Introduction of Pipeline
 ### 1.1 Initialization of Project using CI Pipeline
 The CI Pipeline for this project begins with the name of the project, which in this case will be "Notes Application CI Pipeline". Below that, we will denote where the packages are pushed and where pull requests will be made to.
+```html
+```
 <img src="img/branching.png" style="height: 50px;"/>
 In this instance, 
 ### 1.2 Linting
