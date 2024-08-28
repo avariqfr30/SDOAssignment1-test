@@ -23,11 +23,11 @@
 ## 1. Introduction of Pipeline
 ### 1.1 Initialization of Project using CI Pipeline
 The CI Pipeline for this project begins with the name of the project, which in this case will be "Notes Application CI Pipeline". Below that, we will denote where the packages are pushed and where pull requests will be made to.
-```
 
-```
-<img src="img/newbranching.png" style="height: 80px;"/>
+<img src="img/newbranching.png" style="height: 150px;"/>
+
 In this instance, we made sure that the workflow will run from any change made into any of the repositories that are made into the project, be it in the development cycle, or when we are pushing to the main branch.
+
 ### 1.2 Linting
 
 ## 2. Automated Testing
