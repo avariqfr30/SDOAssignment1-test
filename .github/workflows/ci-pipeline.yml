@@ -54,6 +54,7 @@ jobs:
           src
           !src/node_modules
   integration-tests:
+   needs: unit-tests
    runs-on: ubuntu-latest
    steps:
    - uses: actions/checkout@v3
@@ -70,6 +71,7 @@ jobs:
    - name: Run Integration test
      run: npm run test-integration --prefix src
   e2e-test:
+   needs: integration-tests
    timeout-minutes: 60
    runs-on: ubuntu-latest
    steps:
