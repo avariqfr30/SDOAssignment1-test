@@ -46,8 +46,8 @@ jobs:
        mongodb-version: "7.0.12"
    - name: Run unit tests
      run: npm run test-unit --prefix src
-   - if: success() || failure() && github.ref=='ref/heads/devbranch'
-     uses: actions/upload-artifact@v3
+   - uses: actions/upload-artifact@v3
+     if: always() && github.ref=='ref/heads/devbranch'
      with: 
        name: code-coverage-report
        path: |
