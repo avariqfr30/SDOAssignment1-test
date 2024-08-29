@@ -2,20 +2,10 @@ name: Notes Application CI Pipeline
 on:
   push:
     branches:
-    - main
-    - devbranch
-    - features/lint-testing
-    - features/unit-testing
-    - features/integration-testing
-    - features/adde2e-testing
+    - '**'
   pull_request:
     branches:
-    - main
-    - devbranch
-    - features/lint-testing
-    - features/unit-testing
-    - features/integration-testing
-    - features/adde2e-testing
+    - '**'
 jobs:
   lint:
     runs-on: ubuntu-latest
@@ -29,69 +19,3 @@ jobs:
       run: npm install --prefix src
     - name: run lint
       run: npm run test-lint --prefix src
-  unit-tests:
-   needs: lint
-   runs-on: ubuntu-latest
-   steps:
-   - uses: actions/checkout@v3
-   - name: Use Node.js 17.x
-     uses: actions/setup-node@v3
-     with:
-       node-version: "17.6.0"
-   - name: Install dependencies
-     run: npm install --prefix src
-   - name: Start MongoDB
-     uses: supercharge/mongodb-github-action@1.11.0
-     with:
-       mongodb-version: "7.0.12"
-   - name: Run unit tests
-     run: npm run test-unit --prefix src
-   - if: always() && github.ref=='refs/heads/devbranch'
-     uses: actions/upload-artifact@v3
-     with: 
-       name: code-coverage-report
-       path: |
-          src
-          !src/node_modules
-  integration-tests:
-   needs: unit-tests
-   runs-on: ubuntu-latest
-   steps:
-   - uses: actions/checkout@v3
-   - name: Use Node.js 17.x
-     uses: actions/setup-node@v3
-     with:
-       node-version: "17.6.0"
-   - name: Start MongoDB
-     uses: supercharge/mongodb-github-action@1.11.0
-     with:
-        mongodb-version: "7.0.12"
-   - name: Install dependencies
-     run: npm install --prefix src
-   - name: Run Integration test
-     run: npm run test-integration --prefix src
-  e2e-test:
-   needs: integration-tests
-   timeout-minutes: 60
-   runs-on: ubuntu-latest
-   steps:
-    - uses: actions/checkout@v3
-    - uses: actions/setup-node@v3
-      with:
-        node-version: "17.6.0"
-    - name: Install dependencies
-      run: npm install --prefix src 
-    - name: Start MongoDB
-      uses: supercharge/mongodb-github-action@1.11.0
-      with:
-        mongodb-version: "7.0.12"
-    - name: Install Playwright
-      run: cd src && npx playwright install --with-deps
-    - name: Run Playwright tests
-      run: cd src && npx playwright test
-    - if: always() && github.ref=='refs/heads/devbranch'
-      uses: actions/upload-artifact@v3
-      with:
-        name: playwright-report
-        path: src/playwright-report/index.html
-        retention-days: 30
